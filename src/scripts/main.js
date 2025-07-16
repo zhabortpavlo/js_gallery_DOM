@@ -4,12 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const largeImg = document.getElementById('largeImg');
 
   thumbs.addEventListener('click', function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
-    let link = event.target.closest('a'); 
-    if (!link || !thumbs.contains(link)) return; 
+    const link = event.target.closest('a');
+    if (!link) return;
 
     const largeImageSrc = link.getAttribute('href');
     largeImg.src = largeImageSrc;
   });
 });
+
